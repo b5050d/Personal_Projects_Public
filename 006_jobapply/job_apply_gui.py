@@ -1,7 +1,6 @@
 import os
 import tkinter as tk
 import datetime
-from turtle import position
 import docx
 
 job_window=tk.Tk()
@@ -121,7 +120,7 @@ def gen_cover():
     date=str(date_ent.get())
     covertext=cover_textbox.get('1.0',tk.END)
     docname='BDyer_CoverLetter_{}_{}.docx'.format(company,date)
-    docpath=os.path.dirname(__file__)+'\\'+docname
+    docpath=path2data+'\\'+docname
     if os.path.exists(docpath):
         pass
     else:
