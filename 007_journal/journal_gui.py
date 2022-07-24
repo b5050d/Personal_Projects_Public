@@ -1,6 +1,7 @@
 import tkinter as tk
 import datetime
 import os
+from tkinter import messagebox
 
 currdir=os.path.dirname(__file__)
 logloc=os.path.dirname(os.path.dirname(os.path.dirname(__file__)))+'\\Local_Data'
@@ -8,6 +9,8 @@ if os.path.exists(logloc):
     print('Your Local_Data folder already exists, very nice')
 else:
     os.mkdir(logloc)
+    print("This application has gone ahead and created the necessary folder")
+
 print("This is where your logs should be stored and kept private",logloc)
 
 journal_window=tk.Tk()
@@ -63,7 +66,7 @@ def clear_entry():
 
 previous_butt=tk.Button(text='Previous Entry',command=previous_entry).grid(row=rv,column=2)
 next_butt=tk.Button(text='Next Entry',command=next_entry).grid(row=rv,column=3)
-del_butt=tk.Button(text='Delete Entry',command=clear_entry).grid(row=rv,column=4)
+del_butt=tk.Button(text='Delete Entry',command=clear_entry,fg='red').grid(row=rv,column=4)
 rv+=1
 textbox_new=tk.Text()
 textbox_new.grid(row=rv,columnspan=5)
@@ -106,8 +109,6 @@ if os.path.exists(newlogfile):
 else:
     textbox_new.delete('1.0',tk.END)
     textbox_new.insert('1.0',"<No entry exists for this date :/ >")
-
-from tkinter import messagebox
 
 def on_closing():
     if messagebox.askokcancel("Quit", "Do you want to quit?"):
