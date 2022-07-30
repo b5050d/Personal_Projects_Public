@@ -2,6 +2,10 @@ import tkinter as tk
 import datetime
 import os
 from tkinter import messagebox
+# TO ADD
+# ADD A TO-DO LIST NEXT TO THE JOURNAL APPLICATION
+# BUILD A PLACE WHERE ALL OF THESE MODULES CAN BE LAUNCHED AND STORED
+
 
 currdir=os.path.dirname(__file__)
 logloc=os.path.dirname(os.path.dirname(os.path.dirname(__file__)))+'\\Local_Data'

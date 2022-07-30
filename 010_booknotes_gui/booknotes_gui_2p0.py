@@ -21,7 +21,7 @@ chtit_ent=tk.Entry()
 chtit_ent.grid(row=rv,column=5)
 
 rv+=1
-textbox=tk.Text()
+textbox=tk.Text(bg='black',fg='cyan',insertbackground='green')
 textbox.grid(row=rv,columnspan=6)
 
 #Define any variables/Necessary resources
